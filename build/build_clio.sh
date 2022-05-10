@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-cmake -S clio_src -B clio_src/build 
-cmake --build clio_src/build --parallel $(nproc)
+export SRC_DIR=$(realpath clio_src)
+echo "Clio SRC_DIR passed to CMake: ${SRC_DIR}"
+
+cmake -S clio_ci -B clio_ci/build -DSRC_DIR=$SRC_DIR
+cmake --build clio_ci/build --parallel $(nproc)
