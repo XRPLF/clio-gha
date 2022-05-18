@@ -1,0 +1,6 @@
+name: 'Test clio'
+description: 'Run clio_tests'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

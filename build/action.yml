@@ -1,7 +1,7 @@
 name: 'build clio'
-description: 'build clio'
+description: 'Build clio'
 
 runs:
   using: 'docker'
-  image: 'docker://legleux/ct' # the clio_builder docker image
+  image: 'docker://legleux/ct' # the clio_builder docker image TODO: change this to local Dockerfile or from docker repo?
   entrypoint: ./gha/build/build_clio.sh
