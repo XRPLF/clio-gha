@@ -23,7 +23,7 @@ ENV BOOST_ROOT=/boost
 COPY --from=deps /opt/cmake/ /opt/cmake/
 ENV PATH="/opt/cmake/bin:$PATH"
 
-RUN apt-get update && apt-get install -y git make software-properties-common pkg-config libssl-dev zlib1g-dev bison flex autoconf
+RUN apt-get update && apt-get install -y git make software-properties-common pkg-config libssl-dev zlib1g-dev bison flex autoconf dpkg-sig equivs
 
 COPY install_compilers.sh .
 ARG CC=gcc
