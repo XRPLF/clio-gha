@@ -32,4 +32,4 @@ RUN ./install_compilers.sh "${CC}"
 RUN apt-get clean
 COPY build_clio.sh /build_clio.sh
 RUN chmod +x /build_clio.sh
-ENTRYPOINT ["/build_clio.sh"]
+CMD ["/build_clio.sh"]
